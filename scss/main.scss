@@ -1,0 +1,9 @@
+@import "./mixin";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+@include media (0px);
+@include media (576px);
+@include media (1000px);

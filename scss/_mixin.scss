@@ -1,0 +1,27 @@
+@mixin media($width) {
+  @if $width == 1000px {
+    @media only screen and (min-width: 1000px) {
+      @for $i from 1 through 12 {
+        .col-lg-#{$i} {
+          width: 8.333333% * $i;
+        }
+      }
+    }
+  } @else if $width == 576px {
+    @media only screen and (min-width: 576px) {
+      @for $i from 1 through 12 {
+        .col-sm-#{$i} {
+          width: 8.333333% * $i;
+        }
+      }
+    }
+  } @else if $width ==0px {
+    @media only screen and (min-width: 0px) {
+      @for $i from 1 through 12 {
+        .col-p#{$i} {
+          width: 8.333333% * $i;
+        }
+      }
+    }
+  }
+}
